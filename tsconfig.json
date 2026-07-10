@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "target": "esnext",
+    "moduleResolution": "nodenext", // Гарантирует правильный поиск модулей в Vite + Node
+    "types": ["vite/client"],       // ВАЖНО: Добавлено для поддержки специфичных функций Vite
+
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  // ВАЖНО: Указывает компилятору, где именно искать ваши TypeScript файлы в Laravel
+  "include": [
+    "resources/js/**/*.ts",
+    "resources/js/**/*.d.ts",
+    "resources/js/**/*.tsx"      // Добавлено, так как у вас включен режим JSX для React
+  ]
+}
