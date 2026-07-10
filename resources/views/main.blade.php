@@ -12,7 +12,7 @@
 
 <body class="bg-slate-50 font-sans text-slate-800">
 
-<div id="landing-page" class="min-h-screen flex flex-col justify-between">
+<div id="landing-page" class="bg-[#F8F5EE] min-h-screen flex flex-col justify-between">
     <!-- Шапка -->
     <header class="bg-white shadow-sm py-4 px-6">
         <div class="max-w-5xl mx-auto flex justify-between items-center">
@@ -22,7 +22,7 @@
     </header>
 
     <!-- Главный контент -->
-    <main class="max-w-4xl mx-auto px-6 py-12 flex-grow flex flex-col justify-center items-center text-center">
+    <main class="bg-[#F8F5EE] max-w-4xl mx-auto px-6 py-12 flex-grow flex flex-col justify-center items-center text-center">
         <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
             Выбери предметы для экзаменов <span class="text-blue-600">осознанно</span>
         </h1>
@@ -33,20 +33,20 @@
         <!-- Сетка с преимуществами из ТЗ -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mb-12 text-left">
             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
-                <div class="text-blue-500 font-bold mb-2">Точный расчет</div>
+                <div class="text-[#C98D52] font-bold mb-2">Точный расчет</div>
                 <p class="text-sm text-slate-500">Идёт оценка успеваемости, отношения к предметам и цели.</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
-                <div class="text-blue-500 font-bold mb-2">Когнитивный профиль</div>
+                <div class="text-[#C98D52] font-bold mb-2">Когнитивный профиль</div>
                 <p class="text-sm text-slate-500">Мини-тесты на логику, память и внимание подскажут риски при подготовке.</p>
             </div>
             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100">
-                <div class="text-blue-500 font-bold mb-2">Карта решений</div>
+                <div class="text-[#C98D52] font-bold mb-2">Карта решений</div>
                 <p class="text-sm text-slate-500">Вы получите не просто список, а пошаговый план действий и разбор рисков.</p>
             </div>
         </div>
 
-        <button id="start-test-btn" class="bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/20 transform hover:-translate-y-0.5 transition active:translate-y-0">
+        <button id="start-test-btn" class="bg-blue-600 hover:bg-blue-700 text-[#C98D52]text-lg font-semibold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/20 transform hover:-translate-y-0.5 transition active:translate-y-0">
             Пройти диагностику
         </button>
     </main>
@@ -112,7 +112,7 @@
                     <div id="region-suggestions" class="absolute left-0 right-0 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg hidden z-50 max-h-48 overflow-y-auto"></div>
                 </div>
 
-                <button type="button" data-next="2" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition mt-2">
+                <button type="button" data-next="2" class="w-full bg-blue-600 hover:bg-blue-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition mt-2">
                     Далее
                 </button>
             </div>
@@ -152,10 +152,10 @@
 
                 <!-- Кнопки навигации -->
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="1" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="1" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
-                    <button type="button" data-next="3" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition mt-2">
+                    <button type="button" data-next="3" class="w-full bg-blue-600 hover:bg-blue-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition mt-2">
                         Далее
                     </button>
 
@@ -166,7 +166,7 @@
             <div id="step-3" class="space-y-5 hidden">
                 <div class="flex items-center justify-between">
                     <label class="block text-sm font-semibold text-slate-700">Укажи свои оценки по предметам</label>
-                    <button type="button" id="toggle-help-btn" class="text-blue-500 hover:text-blue-600 bg-blue-50 hover:bg-blue-100 w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs transition">
+                    <button type="button" id="toggle-help-btn" class="text-[#C98D52] hover:text-blue-600 bg-blue-50 hover:bg-blue-100 w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs transition">
                         ?
                     </button>
                 </div>
@@ -208,10 +208,10 @@
                 </div>
 
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="2" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="2" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
-                    <button type="button" data-next="4" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition mt-2">
+                    <button type="button" data-next="4" class="w-full bg-blue-600 hover:bg-blue-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition mt-2">
                         Далее
                     </button>
                 </div>
@@ -246,7 +246,7 @@
                                                             @foreach(range(1, 5) as $val)
                                                                 <label class="cursor-pointer">
                                                                     <input type="radio" name="q_{{ $question->id }}_{{ $subject->code }}" value="{{ $val }}" class="hidden peer" {{ $val === 3 ? 'checked' : '' }}>
-                                                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold text-slate-500 bg-white border border-slate-200 peer-checked:border-blue-500 peer-checked:bg-blue-600 peer-checked:text-white hover:border-slate-300 transition">{{ $val }}</div>
+                                                                    <div class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold text-slate-500 bg-white border border-slate-200 peer-checked:border-blue-500 peer-checked:bg-blue-600 peer-checked:text-[#C98D52]hover:border-slate-300 transition">{{ $val }}</div>
                                                                 </label>
                                                             @endforeach
                                                             <span class="text-xs px-1" title="Полностью согласен">😍</span>
@@ -263,10 +263,10 @@
                 </div>
 
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="3" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="3" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
-                    <button type="button" data-next="5" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition">
+                    <button type="button" data-next="5" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition">
                         Далее
                     </button>
                 </div>
@@ -280,12 +280,12 @@
                 </div>
 
                 <!-- Контейнер игрового движка теста -->
-                <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-inner flex flex-col items-center justify-center min-h-[250px] relative overflow-hidden" id="wm-game-container">
+                <div class="bg-brand-bg text-[#C98D52]p-8 rounded-2xl shadow-inner flex flex-col items-center justify-center min-h-[250px] relative overflow-hidden" id="wm-game-container">
 
                     <!-- Состояние А: Кнопка Старта -->
                     <div id="wm-intro" class="text-center space-y-4">
-                        <p class="text-sm text-slate-300 max-w-sm mx-auto">Сейчас тебе будут показаны ряды чисел или букв на 5 секунд. Твоя задача — не просто запомнить их, а выполнить с ними мысленное задание.</p>
-                        <button type="button" id="start-wm-btn" class="bg-blue-600 hover:bg-blue-505 text-white font-bold py-2.5 px-6 rounded-xl transition shadow-md shadow-blue-500/20">
+                        <p class="text-sm text-[#B06836] max-w-sm mx-auto">Сейчас тебе будут показаны ряды чисел или букв на 5 секунд. Твоя задача — не просто запомнить их, а выполнить с ними мысленное задание.</p>
+                        <button type="button" id="start-wm-btn" class="bg-blue-600 hover:bg-blue-505 text-[#C98D52]font-bold py-2.5 px-6 rounded-xl transition shadow-md shadow-blue-500/20">
                             Запустить тест памяти
                         </button>
                     </div>
@@ -293,11 +293,11 @@
                     <!-- Состояние Б: Экран демонстрации задания и ряда -->
                     <div id="wm-display" class="hidden text-center space-y-4">
                         <!-- Текст задания, например: "Введи этот ряд в обратном порядке" -->
-                        <p id="wm-instruction" class="text-xs uppercase tracking-wider text-blue-400 font-bold bg-blue-950/40 px-3 py-1.5 rounded-full inline-block"></p>
+                        <p id="wm-instruction" class="text-xs uppercase tracking-wider text-[#B06836] font-bold px-3 py-1.5 rounded-full inline-block"></p>
 
                         <!-- Сам ряд для запоминания -->
                         <div class="py-2">
-                            <span id="wm-number" class="text-4xl md:text-5xl font-black tracking-widest text-yellow-400 select-none"></span>
+                            <span id="wm-number" class="text-4xl md:text-5xl font-black tracking-widest text-[#C98D52] -400 select-none"></span>
                         </div>
 
                         <p class="text-xs text-slate-400">Запоминай ряд и условие...</p>
@@ -306,11 +306,11 @@
                     <!-- Состояние В: Экран ввода ответа -->
                     <div id="wm-input-zone" class="hidden text-center space-y-4 w-full max-w-sm">
                         <!-- Напоминалка задания в момент ввода -->
-                        <p id="wm-reminder" class="text-xs text-slate-300 italic"></p>
+                        <p id="wm-reminder" class="text-xs text-[#B06836] italic"></p>
 
-                        <input type="text" id="wm-user-answer" autocomplete="off" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-center text-xl font-bold tracking-widest text-white focus:outline-none focus:border-blue-500 transition" placeholder="Введите ваш ответ через дефис">
+                        <input type="text" id="wm-user-answer" autocomplete="off" class="w-full bg-brand-bg border border-brand-btnSubmit text-[#B0683663] border border-slate-700 rounded-xl p-3 text-center text-xl font-bold tracking-widest text-[#C98D52]focus:outline-none focus:border-blue-500 transition" placeholder="Введите ваш ответ через дефис">
 
-                        <button type="button" id="submit-wm-answer-btn" class="w-full bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-xl transition">
+                        <button type="button" id="submit-wm-answer-btn" class="w-full bg-brand-btnSubmit hover:bg-green-500 text-[#C98D52]font-semibold py-2 px-4 rounded-xl transition">
                             Подтвердить ответ
                         </button>
                     </div>
@@ -318,18 +318,18 @@
                     <!-- Состояние Г: Экран окончания раунда / теста -->
                     <div id="wm-finished" class="hidden text-center space-y-2">
                         <p class="text-green-400 font-bold text-lg">Тест памяти завершен!</p>
-                        <p id="wm-final-status" class="text-sm font-medium text-slate-200"></p>
+                        <p id="wm-final-status" class="text-sm font-medium text-[#B06836] "></p>
                         <p class="text-xs text-slate-400">Результаты зафиксированы. Нажми «Далее» для перехода к следующему блоку.</p>
                     </div>
                 </div>
 
                 <!-- Кнопки перемещения -->
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="4" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="4" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
                     <!-- Кнопка Далее изначально заблокирована (disabled), пока тест не пройден полностью -->
-                    <button type="button" data-next="6" id="wm-next-btn" class="w-2/3 bg-slate-300 text-slate-500 font-semibold py-3 px-4 rounded-xl cursor-not-allowed transition" disabled>
+                    <button type="button" data-next="6" id="wm-next-btn" class="w-2/3 bg-brand-btnDisabled text-slate-500 font-semibold py-3 px-4 rounded-xl cursor-not-allowed transition" disabled>
                         Далее
                     </button>
                 </div>
@@ -342,22 +342,22 @@
                     <p class="text-xs text-slate-500">Оценка способности запоминать термины, определения и понятия. Тест состоит из нескольких этапов.</p>
                 </div>
 
-                <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-inner min-h-[300px] flex flex-col items-center justify-center relative overflow-hidden" id="vm-verbal-container">
+                <div class="bg-brand-bg text-[#C98D52]p-6 rounded-2xl shadow-inner min-h-[300px] flex flex-col items-center justify-center relative overflow-hidden" id="vm-verbal-container">
 
                     <!-- ЭТАП 0: Старт теста -->
                     <div id="vmv-intro" class="text-center space-y-4">
-                        <p class="text-sm text-slate-300 max-w-sm mx-auto">Тебе будет показан список слов на 25 секунд. Постарайся запомнить их как можно лучше.</p>
-                        <button type="button" id="start-vmv-btn" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 px-6 rounded-xl transition shadow-md shadow-blue-500/20">
+                        <p class="text-sm text-[#B06836] max-w-sm mx-auto">Тебе будет показан список слов на 25 секунд. Постарайся запомнить их как можно лучше.</p>
+                        <button type="button" id="start-vmv-btn" class="bg-blue-600 hover:bg-blue-500 text-[#C98D52]font-bold py-2.5 px-6 rounded-xl transition shadow-md shadow-blue-500/20">
                             Начать тест
                         </button>
                     </div>
 
                     <!-- ЭТАП 1: Демонстрация слов (VM_01) -->
                     <div id="vmv-show" class="hidden text-center space-y-4 w-full">
-                        <p class="text-xs uppercase tracking-wider text-yellow-400 font-bold">Осталось времени: <span id="vmv-timer">25</span> сек</p>
+                        <p class="text-xs uppercase tracking-wider text-[#C98D52] -400 font-bold">Осталось времени: <span id="vmv-timer">25</span> сек</p>
                         <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 max-w-xl mx-auto py-2">
                             @foreach(['атом', 'рынок', 'закон', 'клетка', 'облако', 'договор', 'энергия', 'образ', 'эпоха', 'алгоритм'] as $word)
-                                <span class="bg-slate-800 border border-slate-700 px-3 py-2 rounded-xl text-sm font-medium tracking-wide shadow-sm select-none">{{ $word }}</span>
+                                <span class="bg-brand-select border border-slate-300 text-[#B0683663] border border-slate-700 px-3 py-2 rounded-xl text-sm font-medium tracking-wide shadow-sm select-none">{{ $word }}</span>
                             @endforeach
                         </div>
                     </div>
@@ -365,9 +365,9 @@
                     <!-- ЭТАП 2: Немедленное воспроизведение (VM_02) -->
                     <div id="vmv-immediate" class="hidden text-center space-y-4 w-full max-w-md">
                         <p id="timer-immediate" class="text-center text-xs font-semibold mb-2"></p>
-                        <p class="text-sm font-semibold text-slate-200">Введи все слова, которые ты запомнил (через запятую или пробел):</p>
-                        <textarea id="vmv-immediate-input" rows="3" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-blue-500 transition placeholder-slate-500" placeholder="Пример: атом, рынок, закон..."></textarea>
-                        <button type="button" id="submit-vmv-immediate" class="w-full bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-xl transition">
+                        <p class="text-sm font-semibold text-[#B06836] ">Введи все слова, которые ты запомнил (через запятую или пробел):</p>
+                        <textarea id="vmv-immediate-input" rows="3" class="w-full bg-brand-bg border border-brand-btnSubmit text-[#B0683663] border border-slate-700 rounded-xl p-3 text-sm text-[#C98D52]focus:outline-none focus:border-blue-500 transition placeholder-slate-500" placeholder="Пример: атом, рынок, закон..."></textarea>
+                        <button type="button" id="submit-vmv-immediate" class="w-full bg-brand-btnSubmit hover:bg-green-500 text-[#C98D52]font-semibold py-2 px-4 rounded-xl transition">
                             Подтвердить и перейти к узнаванию
                         </button>
                     </div>
@@ -375,16 +375,16 @@
                     <!-- ЭТАП 3: Узнавание (VM_03) -->
                     <div id="vmv-recognition" class="hidden text-center space-y-4 w-full max-w-xl">
                         <p id="timer-recognition" class="text-center text-xs font-semibold mb-2"></p>
-                        <p class="text-sm font-semibold text-slate-200">Отметь галочками только те слова, которые БЫЛИ в самом первом списке:</p>
+                        <p class="text-sm font-semibold text-[#B06836] ">Отметь галочками только те слова, которые БЫЛИ в самом первом списке:</p>
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-left py-2">
                             @foreach(['атом', 'камень', 'рынок', 'формула', 'клетка', 'энергия', 'письмо'] as $recWord)
-                                <label class="flex items-center p-2.5 bg-slate-800 border border-slate-700 rounded-xl cursor-pointer hover:bg-slate-750 transition">
+                                <label class="flex items-center p-2.5 bg-brand-select border border-slate-300 text-[#B0683663] border border-slate-700 rounded-xl cursor-pointer hover:bg-slate-750 transition">
                                     <input type="checkbox" name="vmv_rec" value="{{ $recWord }}" class="rounded text-blue-600 mr-2.5 focus:ring-blue-500 bg-slate-700 border-slate-600">
-                                    <span class="text-xs font-medium text-slate-200">{{ $recWord }}</span>
+                                    <span class="text-xs font-medium text-[#B06836] ">{{ $recWord }}</span>
                                 </label>
                             @endforeach
                         </div>
-                        <button type="button" id="submit-vmv-recognition" class="w-full bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-xl transition mt-2">
+                        <button type="button" id="submit-vmv-recognition" class="w-full bg-brand-btnSubmit hover:bg-green-500 text-[#C98D52]font-semibold py-2 px-4 rounded-xl transition mt-2">
                             Подтвердить и перейти к категоризации
                         </button>
                     </div>
@@ -393,12 +393,12 @@
                     <!-- Примечание: VM_04 (Отсроченное воспроизведение) по ТЗ идет через 5-7 минут, его мы вызовем на финальных шагах, а сейчас делаем VM_05 -->
                     <div id="vmv-categorization" class="hidden text-center space-y-4 w-full max-w-xl">
                         <p id="timer-categorization" class="text-center text-xs font-semibold mb-2"></p>
-                        <p class="text-sm font-semibold text-slate-200">Распредели слова по трем смысловым группам:</p>
+                        <p class="text-sm font-semibold text-[#B06836] ">Распредели слова по трем смысловым группам:</p>
                         <div class="space-y-2.5 text-left max-h-[180px] overflow-y-auto pr-1">
                             @foreach(['атом', 'рынок', 'закон', 'клетка', 'облако', 'договор', 'энергия', 'образ', 'эпоха', 'алгоритм'] as $catWord)
-                                <div class="flex items-center justify-between bg-slate-800 border border-slate-700 p-2 rounded-xl">
-                                    <span class="text-xs font-medium text-yellow-400 pl-2">{{ $catWord }}</span>
-                                    <select name="cat_{{ $catWord }}" class="bg-slate-700 border border-slate-600 text-xs rounded-lg p-1.5 text-white w-36">
+                                <div class="flex items-center justify-between bg-brand-select border border-slate-300 text-[#B0683663] border border-slate-700 p-2 rounded-xl">
+                                    <span class="text-xs font-medium text-[#C98D52] -400 pl-2">{{ $catWord }}</span>
+                                    <select name="cat_{{ $catWord }}" class="bg-slate-700 border border-slate-600 text-xs rounded-lg p-1.5 text-[#C98D52]w-36">
                                         <option value="science">Наука</option>
                                         <option value="society">Общество</option>
                                         <option value="image">Образ</option>
@@ -406,7 +406,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <button type="button" id="submit-vmv-categorization" class="w-full bg-green-600 hover:bg-green-500 text-white font-semibold py-3 px-4 rounded-xl transition shadow-md">
+                        <button type="button" id="submit-vmv-categorization" class="w-full bg-brand-btnSubmit hover:bg-green-500 text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition shadow-md">
                             Завершить тест вербальной памяти
                         </button>
                     </div>
@@ -414,7 +414,7 @@
                     <!-- ФИНАЛ: Конец теста -->
                     <div id="vmv-finished" class="hidden text-center space-y-2">
                         <p class="text-green-400 font-bold text-lg">Вербальный тест завершен!</p>
-                        <p id="vmv-final-status" class="text-sm font-medium text-slate-200"></p>
+                        <p id="vmv-final-status" class="text-sm font-medium text-[#B06836] "></p>
                         <p class="text-xs text-slate-400">Результаты сохранены в State. Нажми «Далее».</p>
                     </div>
 
@@ -422,10 +422,10 @@
 
                 <!-- Кнопки перемещения страницы -->
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="5" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="5" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
-                    <button type="button" data-next="7" id="vmv-next-btn" class="w-2/3 bg-slate-300 text-slate-500 font-semibold py-3 px-4 rounded-xl cursor-not-allowed transition" disabled>
+                    <button type="button" data-next="7" id="vmv-next-btn" class="w-2/3 bg-brand-btnDisabled text-slate-500 font-semibold py-3 px-4 rounded-xl cursor-not-allowed transition" disabled>
                         Далее
                     </button>
                 </div>
@@ -439,13 +439,13 @@
                         <span>Тест 3 из 3: Логическое мышление (LR)</span>
                         <span id="lr-progress-text">Вопрос 1 из 8</span>
                     </div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                    <div class="w-full bg-brand-backBtn h-2 rounded-full overflow-hidden">
                         <div id="lr-progress-bar" class="bg-blue-600 h-full transition-all duration-300" style="width: 12.5%"></div>
                     </div>
                 </div>
 
                 <!-- Игровой терминал для вывода вопросов -->
-                <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-inner min-h-[220px] flex flex-col justify-between relative overflow-hidden" id="lr-game-container">
+                <div class="bg-brand-bg text-[#C98D52]p-6 rounded-2xl shadow-inner min-h-[220px] flex flex-col justify-between relative overflow-hidden" id="lr-game-container">
 
                     <!-- Контейнер текущего вопроса -->
                     <div class="space-y-4">
@@ -466,10 +466,10 @@
 
                 <!-- Кнопки перемещения страницы -->
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="6" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="6" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
-                    <button type="button" id="lr-next-question-btn" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition">
+                    <button type="button" id="lr-next-question-btn" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition">
                         Далее
                     </button>
                 </div>
@@ -483,27 +483,27 @@
                         <span>Тест 4: Абстрактно-символическое мышление (AR)</span>
                         <span id="ar-progress-text">Задание 1 из 8</span>
                     </div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                        <div id="ar-progress-bar" class="bg-indigo-600 h-full transition-all duration-300" style="width: 12.5%"></div>
+                    <div class="w-full bg-brand-backBtn h-2 rounded-full overflow-hidden">
+                        <div id="ar-progress-bar" class="bg-brand-btnSubmit h-full transition-all duration-300" style="width: 12.5%"></div>
                     </div>
                 </div>
 
                 <!-- Игровой терминал для вывода заданий AR -->
-                <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-inner min-h-[220px] flex flex-col justify-between relative overflow-hidden" id="ar-game-container">
+                <div class="bg-brand-bg text-[#C98D52]p-6 rounded-2xl shadow-inner min-h-[220px] flex flex-col justify-between relative overflow-hidden" id="ar-game-container">
 
                     <!-- Контейнер текущего задания -->
                     <div class="space-y-4 w-full">
-                        <p class="text-xs uppercase tracking-wider text-indigo-400 font-bold bg-indigo-950/40 px-3 py-1.5 rounded-full inline-block">Найди закономерность или реши задачу</p>
+                        <p class="text-xs uppercase tracking-wider text-[#B06836] font-bold text-[#B06836] px-3 py-1.5 rounded-full inline-block">Найди закономерность или реши задачу</p>
 
                         <!-- Текст задания (формулы, схемы, символы) -->
-                        <p id="ar-task-text" class="text-base md:text-lg font-black tracking-wide text-yellow-400 select-none text-center py-2"></p>
+                        <p id="ar-task-text" class="text-base md:text-lg font-black tracking-wide text-[#C98D52] -400 select-none text-center py-2"></p>
                     </div>
 
                     <!-- Зона ввода текстового ответа -->
                     <div class="w-full max-w-xs mx-auto space-y-3">
-                        <input type="text" id="ar-user-answer" autocomplete="off" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-center text-xl font-bold tracking-widest text-white focus:outline-none focus:border-indigo-500 transition" placeholder="Введите ваш ответ">
+                        <input type="text" id="ar-user-answer" autocomplete="off" class="w-full bg-brand-bg border border-brand-btnSubmit text-[#B0683663] border border-slate-700 rounded-xl p-3 text-center text-xl font-bold tracking-widest text-[#C98D52]focus:outline-none focus:border-indigo-500 transition" placeholder="Введите ваш ответ">
 
-                        <button type="button" id="ar-submit-answer-btn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-xl transition">
+                        <button type="button" id="ar-submit-answer-btn" class="w-full bg-brand-btnSubmit hover:bg-indigo-500 text-[#C98D52]font-semibold py-2 px-4 rounded-xl transition">
                             Подтвердить ответ
                         </button>
                     </div>
@@ -512,11 +512,11 @@
 
                 <!-- Кнопки перемещения страницы -->
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="7" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="7" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
                     <!-- Кнопка "Далее" для перехода на Шаг 9 (активируется после окончания теста) -->
-                    <button type="button" data-next="9" id="ar-next-step-btn" class="w-2/3 bg-slate-300 text-slate-500 font-semibold py-3 px-4 rounded-xl cursor-not-allowed transition" disabled>
+                    <button type="button" data-next="9" id="ar-next-step-btn" class="w-2/3 bg-brand-btnDisabled text-slate-500 font-semibold py-3 px-4 rounded-xl cursor-not-allowed transition" disabled>
                         Далее
                     </button>
                 </div>
@@ -531,7 +531,7 @@
                         <span>Тест 5: Вербальное понимание (VR)</span>
                         <span id="vr-progress-text">Вопрос 1 из 5</span>
                     </div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                    <div class="w-full bg-brand-backBtn h-2 rounded-full overflow-hidden">
                         <div id="vr-progress-bar" class="bg-teal-600 h-full transition-all duration-300" style="width: 20%"></div>
                     </div>
                 </div>
@@ -548,7 +548,7 @@
                     </div>
 
                     <!-- Правая колонка: Игровой терминал с вопросами -->
-                    <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-inner min-h-[250px] flex flex-col justify-between relative overflow-hidden" id="vr-game-container">
+                    <div class="bg-brand-bg text-[#C98D52]p-5 rounded-2xl shadow-inner min-h-[250px] flex flex-col justify-between relative overflow-hidden" id="vr-game-container">
 
                         <div id="vr-questions-wrapper" class="space-y-3.5 w-full flex-grow flex flex-col justify-between">
                             <div>
@@ -559,7 +559,7 @@
                             </div>
 
                             <!-- ВНУТРЕННЯЯ КНОПКА: Только для ответов на вопросы внутри теста -->
-                            <button type="button" id="vr-submit-answer-btn" class="w-full bg-teal-400 hover:bg-teal-700 text-white text-xs font-semibold py-2.5 px-4 rounded-xl shadow-md transition mt-2 cursor-pointer">
+                            <button type="button" id="vr-submit-answer-btn" class="w-full bg-teal-400 hover:bg-teal-700 text-[#C98D52]text-xs font-semibold py-2.5 px-4 rounded-xl shadow-md transition mt-2 cursor-pointer">
                                 Ответить на вопрос
                             </button>
                         </div>
@@ -576,12 +576,12 @@
 
                 <!-- Кнопки перемещения страницы -->
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="8" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="8" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
 
                     <!-- ГЛАВНАЯ КНОПКА ФОРМЫ: Изначально скрыта классом hidden, появится только в конце теста -->
-                    <button type="button" data-next="10" id="vr-next-step-btn" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer hidden">
+                    <button type="button" data-next="10" id="vr-next-step-btn" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer hidden">
                         Далее
                     </button>
                 </div>
@@ -596,13 +596,13 @@
                         <span>Тест 6: Пространственное мышление (SP)</span>
                         <span id="sp-progress-text">Задание 1 из 6</span>
                     </div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                        <div id="sp-progress-bar" class="bg-purple-600 h-full transition-all duration-300" style="width: 16.6%"></div>
+                    <div class="w-full bg-brand-backBtn h-2 rounded-full overflow-hidden">
+                        <div id="sp-progress-bar" class="bg-brand-btnSubmit h-full transition-all duration-300" style="width: 16.6%"></div>
                     </div>
                 </div>
 
                 <!-- Игровой терминал пространственного теста -->
-                <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-inner min-h-[220px] flex flex-col justify-between relative overflow-hidden" id="sp-game-container">
+                <div class="bg-brand-bg text-[#C98D52]p-6 rounded-2xl shadow-inner min-h-[220px] flex flex-col justify-between relative overflow-hidden" id="sp-game-container">
 
                     <!-- Обертка для вопросов и инпута -->
                     <div id="sp-questions-wrapper" class="space-y-4 w-full flex-grow flex flex-col justify-between">
@@ -614,10 +614,10 @@
 
                         <!-- Зона ввода ответа -->
                         <div class="w-full max-w-xs mx-auto space-y-3 pt-2">
-                            <input type="text" id="sp-user-answer" autocomplete="off" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-center text-sm font-bold tracking-wide text-white focus:outline-none focus:border-purple-500 transition" placeholder="Введите ваш ответ">
+                            <input type="text" id="sp-user-answer" autocomplete="off" class="w-full bg-brand-bg border border-brand-btnSubmit text-[#B0683663] border border-slate-700 rounded-xl p-3 text-center text-sm font-bold tracking-wide text-[#C98D52] focus:outline-none focus:border-purple-500 transition" placeholder="Введите ваш ответ">
 
                             <!-- Внутренняя кнопка для проверки ответа -->
-                            <button type="button" id="sp-submit-answer-btn" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-semibold py-2 px-4 rounded-xl transition cursor-pointer">
+                            <button type="button" id="sp-submit-answer-btn" class="w-full bg-brand-btnSubmit hover:bg-[#B06836] text-[#C98D52]font-semibold py-2 px-4 rounded-xl transition cursor-pointer">
                                 Ответить на вопрос
                             </button>
                         </div>
@@ -633,12 +633,12 @@
 
                 <!-- Кнопки перемещения всей формы -->
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="9" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="9" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
 
                     <!-- Главная кнопка формы: появится только после прохождения всех 6 вопросов SP -->
-                    <button type="button" data-next="11" id="sp-next-step-btn" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer hidden">
+                    <button type="button" data-next="11" id="sp-next-step-btn" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer hidden">
                         Далее
                     </button>
                 </div>
@@ -652,13 +652,13 @@
                         <span>Тест 7: Внимание и саморегуляция (ATT)</span>
                         <span id="att-progress-text">Задание 1 из 7</span>
                     </div>
-                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                        <div id="att-progress-bar" class="bg-rose-600 h-full transition-all duration-300" style="width: 14%"></div>
+                    <div class="w-full bg-brand-backBtn h-2 rounded-full overflow-hidden">
+                        <div id="att-progress-bar" class="bg-brand-btnSubmit h-full transition-all duration-300" style="width: 14%"></div>
                     </div>
                 </div>
 
                 <!-- Игровой терминал теста внимания -->
-                <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-inner min-h-[260px] flex flex-col justify-between relative overflow-hidden" id="att-game-container">
+                <div class="bg-brand-bg text-[#C98D52]p-6 rounded-2xl shadow-inner min-h-[260px] flex flex-col justify-between relative overflow-hidden" id="att-game-container">
 
                     <!-- Контейнер для вопросов и инпутов -->
                     <div id="att-questions-wrapper" class="space-y-4 w-full flex-grow flex flex-col justify-between">
@@ -674,7 +674,7 @@
                         </div>
 
                         <!-- Внутренняя кнопка для подтверждения ответа -->
-                        <button type="button" id="att-submit-answer-btn" class="w-full max-w-sm mx-auto bg-rose-600 hover:bg-rose-500 text-white font-semibold py-2 px-4 rounded-xl transition cursor-pointer flex justify-center">
+                        <button type="button" id="att-submit-answer-btn" class="w-full max-w-sm mx-auto bg-brand-btnSubmit hover:bg-[#B06836]text-[#C98D52]font-semibold py-2 px-4 rounded-xl transition cursor-pointer flex justify-center">
                             Подтвердить ответ
                         </button>
                     </div>
@@ -687,29 +687,26 @@
 
                 </div>
 
-                <!-- Кнопки перемещения всей формы -->
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="10" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="10" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
 
                     <!-- Главная кнопка формы: появится только после прохождения всех 7 вопросов ATT -->
-                    <button type="button" data-next="12" id="att-next-step-btn" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer hidden">
+                    <button type="button" data-next="12" id="att-next-step-btn" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer ">
                         Далее
                     </button>
                 </div>
             </div>
-            <!-- ================= ШАГ 12: Выбор профессионального кластера (Экран S12) ================= -->
+            <!-- ================= шаг 12: Выбор профессионального кластера  ================= -->
             <div id="step-12" class="space-y-5 hidden">
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 mb-1">Финальный шаг: Твои профессиональные интересы</label>
                     <p class="text-xs text-slate-500">Выбери одно или несколько направлений, в которых ты мечтаешь развиваться или строить карьеру в будущем. Это определит фокус твоих рекомендаций.</p>
                 </div>
 
-                <!-- Сетка профессиональных кластеров по ТЗ -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="clusters-container">
 
-                    <!-- Кластер 1: IT -->
                     <label class="cluster-card flex items-start p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-blue-400 hover:bg-blue-50/20 transition relative">
                         <input type="checkbox" name="pro_clusters" value="IT" class="cluster-checkbox mt-1 mr-3 text-blue-600 focus:ring-blue-500 rounded">
                         <div>
@@ -718,7 +715,6 @@
                         </div>
                     </label>
 
-                    <!-- Кластер 2: Engineering -->
                     <label class="cluster-card flex items-start p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-blue-400 hover:bg-blue-50/20 transition relative">
                         <input type="checkbox" name="pro_clusters" value="ENGINEERING" class="cluster-checkbox mt-1 mr-3 text-blue-600 focus:ring-blue-500 rounded">
                         <div>
@@ -727,7 +723,6 @@
                         </div>
                     </label>
 
-                    <!-- Кластер 3: Medicine -->
                     <label class="cluster-card flex items-start p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-blue-400 hover:bg-blue-50/20 transition relative">
                         <input type="checkbox" name="pro_clusters" value="MEDICINE" class="cluster-checkbox mt-1 mr-3 text-blue-600 focus:ring-blue-500 rounded">
                         <div>
@@ -736,7 +731,6 @@
                         </div>
                     </label>
 
-                    <!-- Кластер 4: Economics -->
                     <label class="cluster-card flex items-start p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-blue-400 hover:bg-blue-50/20 transition relative">
                         <input type="checkbox" name="pro_clusters" value="ECONOMICS" class="cluster-checkbox mt-1 mr-3 text-blue-600 focus:ring-blue-500 rounded">
                         <div>
@@ -745,7 +739,6 @@
                         </div>
                     </label>
 
-                    <!-- Кластер 5: Humanities -->
                     <label class="cluster-card flex items-start p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-blue-400 hover:bg-blue-50/20 transition relative">
                         <input type="checkbox" name="pro_clusters" value="HUMANITIES" class="cluster-checkbox mt-1 mr-3 text-blue-600 focus:ring-blue-500 rounded">
                         <div>
@@ -754,7 +747,6 @@
                         </div>
                     </label>
 
-                    <!-- Кластер 6: Creative -->
                     <label class="cluster-card flex items-start p-3 bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-blue-400 hover:bg-blue-50/20 transition relative">
                         <input type="checkbox" name="pro_clusters" value="CREATIVE" class="cluster-checkbox mt-1 mr-3 text-blue-600 focus:ring-blue-500 rounded">
                         <div>
@@ -765,21 +757,19 @@
 
                 </div>
 
-                <!-- Кнопки перемещения всей формы -->
                 <div class="flex gap-3 mt-4">
-                    <button type="button" data-back="11" class="w-1/3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-xl transition">
+                    <button type="button" data-back="11" class="w-1/3 bg-brand-backBtn hover:bg-brand-btnActive text-[#C98D52]font-semibold py-3 px-4 rounded-xl transition">
                         Назад
                     </button>
 
-                    <!-- ФИНАЛЬНАЯ КНОПКА: Отправляет весь state в Laravel -->
-                    <button type="button" id="submit-all-diagnostic-btn" class="w-2/3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer flex justify-center items-center">
+                    <button type="button" id="submit-all-diagnostic-btn" class="w-2/3 bg-emerald-600 hover:bg-emerald-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer flex justify-center items-center">
                         Получить результаты диагностики
                     </button>
                 </div>
             </div>
 
 
-            <!-- ================= ШАГ 13: Финал и Результаты (Экран S13) ================= -->
+            <!-- ================= шаг 13: Финал ================= -->
             <div id="step-13" class="space-y-6 hidden">
                 <div class="text-center">
                     <span class="text-3xl">Ура!</span>
@@ -787,29 +777,26 @@
                     <p class="text-xs text-slate-500 mt-1">Алгоритм Scoring Engine проанализировал твои оценки, отношение к предметам и когнитивный профиль.</p>
                 </div>
 
-                <!-- БЛОК А: Топ рекомендованных наборов предметов -->
                 <div class="space-y-3">
                     <h3 class="text-xs uppercase font-bold tracking-wider text-slate-400">Рекомендованные наборы предметов:</h3>
 
-                    <!-- Сюда TypeScript будет динамически вставлять карточки топ-наборов -->
+                    <!-- карточки топ-наборов -->
                     <div id="recommendations-output-container" class="space-y-3"></div>
                 </div>
 
-                <!-- БЛОК Б: Твой когнитивный профиль (Диагностика навыков) -->
+                <!--  когнитивный профиль (Диагностика навыков) -->
                 <div class="space-y-3 border-t border-slate-200/60 pt-4">
                     <h3 class="text-xs uppercase font-bold tracking-wider text-slate-400">Когнитивный профиль (Мышление и память):</h3>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="cognitive-profiles-output">
-                        <!-- Сюда TypeScript подставит 5 шкал: WM, VM, LR, AR, VR, ATT -->
                     </div>
                 </div>
 
-                <!-- Нижняя панель действий -->
                 <div class="flex gap-3 mt-6 pt-2 border-t border-slate-100">
-                    <button type="button" id="close-final-diagnostic-btn" class="w-1/3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-semibold py-3 px-4 rounded-xl transition cursor-pointer text-sm">
+                    <button type="button" id="close-final-diagnostic-btn" class="w-1/3 bg-slate-100 hover:bg-brand-backBtn text-slate-600 font-semibold py-3 px-4 rounded-xl transition cursor-pointer text-sm">
                         Закрыть
                     </button>
-                    <button type="button" onclick="window.print()" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer flex justify-center items-center gap-2 text-sm">
+                    <button type="button" onclick="window.print()" class="w-2/3 bg-blue-600 hover:bg-blue-700 text-[#C98D52]font-semibold py-3 px-4 rounded-xl shadow-md transition cursor-pointer flex justify-center items-center gap-2 text-sm">
                         Распечатать отчет
                     </button>
                 </div>
@@ -819,13 +806,12 @@
         <div id="result-log" class="mt-4 p-3 bg-slate-900 text-green-400 rounded-lg text-xs font-mono hidden max-h-40 overflow-y-auto"></div>
     </div>
 </div>
-<!-- КОНЕЦ: Модальное окно -->
+
 
 </body>
 </html>
 
 <script>
-    // Laravel автоматически превратит все строки из test_items в один JS-массив
     window.LaravelCognitiveTasks = {!! json_encode($cognitiveTasks ?? []) !!};
 </script>
 

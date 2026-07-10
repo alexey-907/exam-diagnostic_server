@@ -1,9 +1,8 @@
 <tbody class="divide-y divide-slate-100 bg-white">
 @forelse($studentsData as $session)
-    <!-- Основная строка ученика -->
     <tr class="hover:bg-slate-50/80 font-medium transition" onclick="toggleDetails('details-{{ $session->id }}')">
         <td class="p-3">
-            <span class="block font-bold text-slate-800">👤 {{ $session->student_name ?? 'Анонимный гость' }}</span>
+            <span class="block font-bold text-slate-800">{{ $session->student_name ?? 'Анонимный гость' }}</span>
             <span class="block text-[10px] text-slate-400">{{ $session->student_email ?? 'Нет аккаунта' }}</span>
         </td>
         <td class="p-3">
@@ -27,14 +26,12 @@
         @endforeach
     </tr>
 
-    <!-- Раскрывающаяся строка с детальной успеваемостью, отношением и целями -->
     <tr id="details-{{ $session->id }}" class="hidden bg-slate-50/50">
         <td colspan="9" class="p-4 border-t border-b border-slate-200/60">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
 
-                <!-- Блок 1: Школьные оценки -->
                 <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm space-y-1.5">
-                    <span class="block font-bold text-slate-400 uppercase text-[10px] tracking-wider">🏫 Школьная успеваемость:</span>
+                    <span class="block font-bold text-slate-400 uppercase text-[10px] tracking-wider">Школьная успеваемость:</span>
                     <div class="space-y-1 divide-y divide-slate-100">
                         @forelse($session->grades_list as $g)
                             <div class="flex justify-between py-1 font-medium text-slate-700">
@@ -47,9 +44,8 @@
                     </div>
                 </div>
 
-                <!-- Блок 2: Отношение к предметам -->
                 <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm space-y-1.5">
-                    <span class="block font-bold text-slate-400 uppercase text-[10px] tracking-wider">❤️ Отношение и интерес (шкала 1-5):</span>
+                    <span class="block font-bold text-slate-400 uppercase text-[10px] tracking-wider">Отношение и интерес (шкала 1-5):</span>
                     <div class="space-y-1 divide-y divide-slate-100">
                         @forelse($session->attitudes_list as $a)
                             <div class="flex justify-between py-1 font-medium text-slate-700">
@@ -62,10 +58,9 @@
                     </div>
                 </div>
 
-                <!-- Блок 3: Интересы и Трэк -->
                 <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm space-y-2 flex flex-col justify-between">
                     <div class="space-y-1.5">
-                        <span class="block font-bold text-slate-400 uppercase text-[10px] tracking-wider">🎯 Профессиональный фокус:</span>
+                        <span class="block font-bold text-slate-400 uppercase text-[10px] tracking-wider">Профессиональный фокус:</span>
                         <p class="text-slate-700 font-semibold bg-blue-50/50 p-2 rounded-lg border border-blue-100">
                             {{ $session->clusters ?? 'Не выбрано' }}
                         </p>

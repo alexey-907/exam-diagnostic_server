@@ -8,7 +8,6 @@
 </head>
 <body class="bg-slate-100 text-slate-800 font-sans min-h-screen">
 
-<!-- Верхний навигационный бар -->
 <header class="bg-slate-900 text-white shadow-md px-6 py-4 flex justify-between items-center">
     <div class="flex items-center gap-4">
         <h1 class="text-center font-black tracking-wide ">Панель управления тестированием</h1>
@@ -24,7 +23,6 @@
 
 <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-    <!-- ЛЕВАЯ КОЛОНКА: Менеджер добавления вопросов (Занимает 1 часть из 3) -->
     <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 space-y-4 h-fit">
         <h2 class="text-sm font-black uppercase text-slate-400 tracking-wider">Добавить новый вопрос</h2>
 
@@ -61,7 +59,6 @@
                 </div>
             </div>
 
-            <!-- Динамическое поле для ряда Рабочей Памяти (Показывается только для WM) -->
             <div id="field-wm-display" class="space-y-1">
                 <label class="block text-xs font-bold text-slate-600 mb-1">Ряд чисел для демонстрации</label>
                 <input type="text" name="display_data" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs" placeholder="5-1-8-3">
@@ -72,7 +69,6 @@
                 <textarea name="item_text" rows="3" required class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs resize-none" placeholder="Введите условие задачи..."></textarea>
             </div>
 
-            <!-- Динамическое поле для вариантов ответов (Показывается для LR, VR) -->
             <div id="field-options-text" class="space-y-1 hidden">
                 <label class="block text-xs font-bold text-slate-600 mb-1">Варианты ответов (Разделитель точка с запятой)</label>
                 <input type="text" name="options_text" class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs" placeholder="А:Да; Б:Нет; В:Не знаю">
@@ -80,7 +76,7 @@
 
             <div>
                 <label class="block text-xs font-bold text-slate-600 mb-1">Правильный ответ</label>
-                <input type="text" name="correct_answer" required class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs" placeholder="Например: 13 или Б или треугольник">
+                <input type="text" name="correct_answer" required class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs">
             </div>
 
             <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold py-3 px-4 rounded-xl shadow-md transition cursor-pointer">
@@ -89,23 +85,19 @@
         </form>
     </div>
 
-    <!-- ПРАВАЯ КОЛОНКА: Сводные данные учеников (Занимает 2 части из 3) -->
-    <!-- ПРАВАЯ КОЛОНКА: Вкладки учеников и вопросов (Занимает 2 части из 3) -->
     <div class="lg:col-span-2 space-y-4">
 
-        <!-- Переключатели вкладок -->
         <div class="flex gap-2 bg-slate-200 p-1.5 rounded-xl w-fit">
             <button onclick="switchTab('tab-students', 'tab-questions', this)" class="tab-btn bg-white text-slate-800 text-xs font-bold px-4 py-2 rounded-lg shadow-sm transition cursor-pointer">
-                👥 Результаты учеников
+                Результаты учеников
             </button>
             <button onclick="switchTab('tab-questions', 'tab-students', this)" class="tab-btn text-slate-600 hover:text-slate-900 text-xs font-bold px-4 py-2 rounded-lg transition cursor-pointer">
-                📝 Управление вопросами ({!! count($allQuestions) !!})
+                Управление вопросами ({!! count($allQuestions) !!})
             </button>
         </div>
 
-        <!-- ВКЛАДКА А: База учеников -->
         <div id="tab-students" class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
-            <h2 class="text-sm font-black uppercase text-slate-400 tracking-wider">👥 База показателей учеников</h2>
+            <h2 class="text-sm font-black uppercase text-slate-400 tracking-wider">База показателей учеников</h2>
             <div class="overflow-x-auto rounded-xl border border-slate-100 shadow-inner">
                 <table class="w-full text-left border-collapse text-xs">
                     <thead>
@@ -121,15 +113,13 @@
                         <th class="p-3 text-center">ATT</th>
                     </tr>
                     </thead>
-                    <!-- Сюда вставляется ваш существующий <tbody> из прошлого шага со всеми forelse и раскрывающимися блоками -->
                     @include('students_table_body')
                 </table>
             </div>
         </div>
 
-        <!-- ВКЛАДКА Б: Управление вопросами (ДОБАВЛЕНО) -->
         <div id="tab-questions" class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 space-y-4 hidden">
-            <h2 class="text-sm font-black uppercase text-slate-400 tracking-wider">📝 Список вопросов в системе</h2>
+            <h2 class="text-sm font-black uppercase text-slate-400 tracking-wider">Список вопросов в системе</h2>
             <div class="overflow-x-auto rounded-xl border border-slate-100 shadow-inner max-h-[600px] overflow-y-auto">
                 <table class="w-full text-left border-collapse text-xs">
                     <thead>
@@ -151,16 +141,14 @@
                             </td>
                             <td class="p-3 text-slate-600 font-normal">{{ Str::limit($q->item_text, 80) }}</td>
                             <td class="p-3">
-                                <span class="block text-emerald-600 font-bold">🎯 {{ Str::limit(str_replace(['[',']','"'], '', $q->correct_answer_json), 25) }}</span>
+                                <span class="block text-emerald-600 font-bold">{{ Str::limit(str_replace(['[',']','"'], '', $q->correct_answer_json), 25) }}</span>
                                 @if($q->options_json)
                                     <span class="block text-[10px] text-slate-400">Есть варианты выбора</span>
                                 @endif
                             </td>
                             <td class="p-3 text-center space-x-1.5 whitespace-nowrap">
-                                <!-- Кнопка Редактировать (Передает все данные в JS-модалку) -->
-                                <button type="button" onclick="openEditModal({{ json_encode($q) }})" class="bg-amber-500 hover:bg-amber-400 text-white font-bold px-2.5 py-1 rounded text-[11px] transition cursor-pointer">✏️ Изменить</button>
-                                <!-- Кнопка Удалить -->
-                                <a href="{{ url('/admin/questions/delete/'.$q->id) }}" onclick="return confirm('Вы уверены, что хотите полностью удалить этот вопрос из базы?')" class="bg-rose-600 hover:bg-rose-500 text-white font-bold px-2.5 py-1 rounded text-[11px] transition cursor-pointer">🗑️ Удалить</a>
+                                <button type="button" onclick="openEditModal({{ json_encode($q) }})" class="bg-amber-500 hover:bg-amber-400 text-white font-bold px-2.5 py-1 rounded text-[11px] transition cursor-pointer">Изменить</button>
+                                <a href="{{ url('/admin/questions/delete/'.$q->id) }}" onclick="return confirm('Вы уверены, что хотите полностью удалить этот вопрос из базы?')" class="bg-rose-600 hover:bg-rose-500 text-white font-bold px-2.5 py-1 rounded text-[11px] transition cursor-pointer">Удалить</a>
                             </td>
                         </tr>
                     @empty
@@ -173,12 +161,10 @@
 
     </div>
 
-</main>
 
-<!-- ВСПЛЫВАЮЩЕЕ МОДАЛЬНОЕ ОКНО РЕДАКТИРОВАНИЯ (ДОБАВЛЕНО) -->
 <div id="edit-modal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm items-center justify-center p-4 hidden z-50">
     <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl border border-slate-200 p-6 space-y-4 relative animate-fade-in">
-        <h3 class="text-sm font-black uppercase text-slate-500 tracking-wider">✏️ Редактирование вопроса</h3>
+        <h3 class="text-sm font-black uppercase text-slate-500 tracking-wider">Редактирование вопроса</h3>
 
         <form id="edit-form" method="POST" action="" class="space-y-3.5 text-xs">
             @csrf
@@ -224,11 +210,10 @@
         </form>
     </div>
 </div>
-</body>
 
 </main>
+</body>
 
-<!-- Скрипт для интерактивного переключения полей ввода в зависимости от теста -->
 <script>
     function toggleAdminFields() {
         let select = document.getElementById('admin-test-select');
@@ -248,7 +233,6 @@
     }
     document.addEventListener('DOMContentLoaded', toggleAdminFields);
 
-    // Функция интерактивного переключения табов (Ученики / Вопросы)
     function switchTab(activeId, inactiveId, btn) {
         document.getElementById(activeId).classList.remove('hidden');
         document.getElementById(inactiveId).classList.add('hidden');
@@ -260,12 +244,10 @@
         btn.classList.add('bg-white', 'text-slate-800', 'shadow-sm');
     }
 
-    // Функция автоматического заполнения и открытия модалки изменения вопроса
     function openEditModal(task) {
         var modal = document.getElementById('edit-modal');
         var form = document.getElementById('edit-form');
 
-        // Динамически подставляем роут обновления по id строки
         form.action = "/admin/questions/update/" + task.id;
 
         document.getElementById('modal-test-code').value = task.test_code;
@@ -274,11 +256,9 @@
         document.getElementById('modal-item-text').value = task.item_text;
         document.getElementById('modal-old-options').value = task.options_json;
 
-        // Очищаем правильный ответ от скобок JSON перед выводом админу
         var rawAnswer = task.correct_answer_json ? String(task.correct_answer_json).replace(/[\[\]"']/g, '') : '';
         document.getElementById('modal-correct-answer').value = rawAnswer;
 
-        // Управление блоками полей в модалке
         var wmBlock = document.getElementById('modal-wm-block');
         var optBlock = document.getElementById('modal-options-block');
 
@@ -293,7 +273,7 @@
             }
         } else if (['LR', 'VR', 'ATT', 'VM'].includes(task.test_code)) {
             optBlock.classList.remove('hidden');
-            document.getElementById('modal-options-text').value = ''; // Сбрасываем инпут ввода строки
+            document.getElementById('modal-options-text').value = '';
         }
 
         modal.classList.remove('hidden');

@@ -67,7 +67,7 @@ Route::get('/api/regions', function (Request $request) {
 // 4. ЗАЩИЩЕННАЯ ПАНЕЛЬ АДМИНИСТРАТОРА (ИСПРАВЛЕНО: добавлена строгая проверка роли admin)
 // Защищенная панель администратора
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::post('/admin/questions', [AdminController::class, 'storeQuestion']);
 
     // ДОБАВЛЕНО: Маршруты изменения и удаления вопросов по их id

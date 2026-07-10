@@ -195,9 +195,9 @@ export const initStep9VR = () => {
         const currentQ = vrQuestions[vrCurrentIndex];
         if (selectedRadio.value === currentQ.correctAnswer) {
             vrCorrectAnswersCount++;
-            console.log(`✅ ${currentQ.code} — правильно!`);
+            console.log(`${currentQ.code} — правильно!`);
         } else {
-            console.log(`❌ ${currentQ.code} — неправильно. Правильный ответ: ${currentQ.correctAnswer}`);
+            console.log(`${currentQ.code} — неправильно. Правильный ответ: ${currentQ.correctAnswer}`);
         }
 
         // Небольшая задержка перед переходом к следующему вопросу
