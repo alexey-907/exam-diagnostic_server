@@ -141,7 +141,7 @@ export const initStep5WM = () => {
         let interpretation = '';
         if (finalScore >= 70) interpretation = 'Сильная сторона';
         else if (finalScore >= 40) interpretation = 'Средний уровень';
-        else interpretation = 'Зона риска ⚠️';
+        else interpretation = 'Зона риска';
 
         if (wmFinalStatus) {
             wmFinalStatus.innerHTML = `Твой результат: <strong>${finalScore} баллов</strong> (${interpretation})<br>Правильных ответов: ${wmCorrectAnswersCount} из ${wmTasks.length}`;

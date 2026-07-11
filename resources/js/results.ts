@@ -35,7 +35,7 @@ export const initResultsModule = () => {
         // Визуально блокируем кнопку на время расчетов сервера
         if (submitAllBtn) {
             submitAllBtn.disabled = true;
-            submitAllBtn.innerHTML = `<em>Обработкаphp </em>`;
+            submitAllBtn.innerHTML = `<em>Обработка</em>`;
         }
 
         try {

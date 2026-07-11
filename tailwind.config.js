@@ -37,6 +37,8 @@ export default {
                     select: '#F5FCF6',       // Селекты (выпадающие списки)
                     radioChecked: '#AED8A5', // Выбранная радио-кнопка (без #, добавили хэш)
                     btnSubmit: '#C98D52',
+                    // btnSubmit: '#dca96f',
+                    // btnSubmit: '#f19f42',
                     backBtn: '#7BAF80',
 
                     // Кнопка подтверждения на вопросах в тесте

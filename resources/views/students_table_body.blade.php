@@ -49,7 +49,7 @@
                     <div class="space-y-1 divide-y divide-slate-100">
                         @forelse($session->attitudes_list as $a)
                             <div class="flex justify-between py-1 font-medium text-slate-700">
-                                <span>📚 Предмет: {{ $a->subject_code }}</span>
+                                <span>Предмет: {{ $a->subject_code }}</span>
                                 <span class="font-bold text-blue-600">Ср. балл: {{ $a->avg_score }}</span>
                             </div>
                         @empty

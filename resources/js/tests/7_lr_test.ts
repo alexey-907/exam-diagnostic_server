@@ -112,7 +112,7 @@ export const initStep7LR = () => {
             lrOptionsContainer.innerHTML = '';
             currentQ.options.forEach((opt) => {
                 const label = document.createElement('label');
-                label.className = 'flex items-center p-3 bg-slate-800 border border-slate-700 rounded-xl cursor-pointer hover:bg-slate-750 hover:border-slate-500 transition shadow-sm';
+                label.className = 'flex items-center p-3 bg-[#FFFDF7] border border-slate-700 rounded-xl cursor-pointer hover:bg-slate-750 hover:border-slate-500 transition shadow-sm';
                 label.innerHTML = `
                     <input type="radio" name="lr_answer" value="${opt.key}" class="hidden peer">
                     <div class="w-5 h-5 rounded-full border border-slate-500 flex items-center justify-center mr-3 peer-checked:border-blue-500 peer-checked:bg-blue-600 transition-all text-[10px] text-white">✓</div>

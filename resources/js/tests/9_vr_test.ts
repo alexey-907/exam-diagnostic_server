@@ -60,7 +60,7 @@ export const initStep9VR = () => {
         if (vrProgressText) {
             const color = seconds <= 10 ? 'text-rose-400 font-black animate-pulse' : 'text-teal-400';
             const total = vrQuestions.length;
-            vrProgressText.innerHTML = `Вопрос ${vrCurrentIndex + 1} из ${total} <span class="ml-2 font-mono ${color}">⏱️ ${seconds}с</span>`;
+            vrProgressText.innerHTML = `Вопрос ${vrCurrentIndex + 1} из ${total} <span class="ml-2 font-mono ${color}">Осталось ${seconds}с</span>`;
         }
     };
 
@@ -75,7 +75,7 @@ export const initStep9VR = () => {
 
         if (vrProgressText) {
             const total = vrQuestions.length;
-            vrProgressText.innerHTML = `Вопрос ${vrCurrentIndex + 1} из ${total} <span class="ml-2 font-mono text-teal-400">⏱️ ${SECONDS_PER_VR}с</span>`;
+            vrProgressText.innerHTML = `Вопрос ${vrCurrentIndex + 1} из ${total} <span class="ml-2 font-mono text-teal-400">Осталось ${SECONDS_PER_VR}с</span>`;
         }
         if (vrProgressBar) vrProgressBar.style.width = `${progressPercent}%`;
         if (vrQuestionText) vrQuestionText.innerHTML = currentQ.question;
@@ -86,7 +86,7 @@ export const initStep9VR = () => {
             currentQ.options.forEach((opt) => {
                 // Создаем label-контейнер с классом vr-option для легкого поиска
                 const label = document.createElement('label');
-                label.className = 'vr-option flex items-center p-2.5 bg-slate-800 border border-slate-700 rounded-xl cursor-pointer hover:bg-slate-750 hover:border-slate-500 transition shadow-sm';
+                label.className = 'vr-option flex items-center p-2.5 bg-[#FFFDF7] border border-[#C98D52] rounded-xl cursor-pointer hover:bg-slate-750 hover:border-slate-500 transition shadow-sm';
                 label.dataset.value = opt.key;
 
                 label.innerHTML = `

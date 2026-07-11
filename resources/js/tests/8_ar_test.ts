@@ -64,7 +64,7 @@ export const initStep8AR = () => {
 
             if (timeLeft <= 0) {
                 if (arTimerInterval) clearInterval(arTimerInterval);
-                console.log(`⏱Время вышло на задании ${arTasks[arCurrentIndex]?.code}!`);
+                console.log(`Время вышло на задании ${arTasks[arCurrentIndex]?.code}!`);
                 handleArTimeout();
             }
         }, 1000);
@@ -118,7 +118,7 @@ export const initStep8AR = () => {
         if (gameContainer) {
             gameContainer.innerHTML = `
                 <div class="text-center space-y-2 py-4">
-                    <p class="text-green-400 font-bold text-lg">🎉 Тест абстрактного мышления завершен!</p>
+                    <p class="text-green-400 font-bold text-lg">Тест абстрактного мышления завершен!</p>
                     <p class="text-xs text-slate-400">Твой результат зафиксирован в системе. Нажми «Далее» для перехода к следующему блоку.</p>
                 </div>
             `;

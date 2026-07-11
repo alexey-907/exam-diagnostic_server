@@ -13,20 +13,18 @@ Route::get('/', function () {
         return redirect()->route('login');
     }
 
-    // Если это админ, при заходе на корень сайта сразу кидаем его в панель управления
     if (auth()->user()->role === 'admin') {
         return redirect()->route('admin.index');
     }
 
-    // Обычного ученика отправляем собирать оценки и проходить тесты
     return app(TestController::class)->index();
 })->name('main');
 
-// 2. ФИНАЛЬНЫЕ ПОСТ-ОТПРАВКИ ФОРМ ДЛЯ ЗАПИСИ В БД
+// оптравка формы
 Route::post('/api/sessions', 'App\Http\Controllers\DiagnosticController@startSession')->name('Diagnostic');
 Route::post('/api/diagnostic/save-all', 'App\Http\Controllers\DataController@saveAll');
 
-// 3. АВТОДОПОЛНЕНИЕ РЕГИОНОВ РФ (Работает идеально)
+// регионы
 Route::get('/api/regions', function (Request $request) {
     $query = mb_strtolower(trim($request->query('query', '')));
 
@@ -64,25 +62,23 @@ Route::get('/api/regions', function (Request $request) {
     return response()->json(array_values($filtered));
 });
 
-// 4. ЗАЩИЩЕННАЯ ПАНЕЛЬ АДМИНИСТРАТОРА (ИСПРАВЛЕНО: добавлена строгая проверка роли admin)
-// Защищенная панель администратора
+// админка
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::post('/admin/questions', [AdminController::class, 'storeQuestion']);
 
-    // ДОБАВЛЕНО: Маршруты изменения и удаления вопросов по их id
+
     Route::post('/admin/questions/update/{id}', [AdminController::class, 'updateQuestion']);
     Route::get('/admin/questions/delete/{id}', [AdminController::class, 'deleteQuestion']);
 });
 
 Route::get('/diagnostic/pdf/{id}', [DataController::class, 'exportPdf'])->name('diagnostic.pdf');
 
-// 6. УПРАВЛЕНИЕ ЛИЧНЫМ ПРОФИЛЕМ УЧЕНИКА (Сгенерировано Breeze)
+// профиль
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Подключаем маршруты регистрации/входа от Breeze
 require __DIR__.'/auth.php';

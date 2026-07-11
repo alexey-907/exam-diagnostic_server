@@ -186,7 +186,7 @@ export const initStep6VM = () => {
         let interpretation = '';
         if (finalNormalizedVerbalScore >= 70) interpretation = 'Сильная сторона 💪';
         else if (finalNormalizedVerbalScore >= 40) interpretation = 'Средний уровень 😐';
-        else interpretation = 'Зона риска ⚠️';
+        else interpretation = 'Зона риска';
 
         if (vmvFinalStatus) {
             vmvFinalStatus.innerHTML = `Твой результат: <strong>${finalNormalizedVerbalScore} баллов</strong> (${interpretation})`;

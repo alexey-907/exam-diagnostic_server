@@ -56,7 +56,7 @@ export const initStep11SELF = () => {
         if (attSubmitAnswerBtn) {
             attSubmitAnswerBtn.disabled = false;
             attSubmitAnswerBtn.textContent = 'Подтвердить ответ';
-            attSubmitAnswerBtn.className = 'w-full max-w-sm mx-auto bg-rose-600 hover:bg-rose-500 active:bg-rose-700 text-white font-semibold py-2 px-4 rounded-xl transition cursor-pointer flex justify-center disabled:opacity-50 disabled:cursor-not-allowed';
+            attSubmitAnswerBtn.className = 'w-full max-w-sm mx-auto bg-brand-btnSubmit hover:bg-[#dca96f] active:bg-[#f19f42] text-white font-semibold py-2 px-4 rounded-xl transition cursor-pointer flex justify-center disabled:opacity-50 disabled:cursor-not-allowed';
         }
 
         // ============================================================
@@ -64,7 +64,7 @@ export const initStep11SELF = () => {
         // ============================================================
         if (currentT.type === 'scale-1-5') {
             let scaleHtml = `
-                <div class="flex items-center justify-between gap-1 bg-slate-800/60 border border-slate-700/80 p-2 rounded-xl max-w-xs mx-auto">
+                <div class="flex items-center justify-between gap-1 bg-[#FFFDF7] border border-slate-700/80 p-2 rounded-xl max-w-xs mx-auto">
                     <span class="text-[10px] text-slate-400 px-1">Почти никогда</span>
             `;
             for (let v = 1; v <= 5; v++) {
@@ -72,7 +72,7 @@ export const initStep11SELF = () => {
                 scaleHtml += `
                     <label class="cursor-pointer scale-option" data-value="${v}">
                         <input type="radio" name="att_scale" value="${v}" class="hidden peer" ${checked}>
-                        <div class="scale-btn w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold text-slate-400 bg-slate-800 border border-slate-700 hover:border-slate-500 transition ${checked ? 'border-rose-500 bg-rose-600 text-white' : ''}">
+                        <div class="scale-btn w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold text-[#C98D52] bg-[#FFFDF7] border border-[#C98D52] hover:border-slate-500 transition ${checked ? 'border-rose-500 bg-rose-600 text-bg-brand-btnSubmit' : ''}">
                             ${v}
                         </div>
                     </label>
@@ -114,7 +114,7 @@ export const initStep11SELF = () => {
             let optionsHtml = `<div class="grid grid-cols-1 gap-2 text-left">`;
             currentT.options.forEach((opt) => {
                 optionsHtml += `
-                    <label class="custom-option flex items-center p-2.5 bg-slate-800 border border-slate-700 rounded-xl cursor-pointer hover:bg-slate-750 transition shadow-sm" data-value="${opt.val}">
+                    <label class="custom-option flex items-center p-2.5 bg-[#FFFDF7] border border-[#C98D52] rounded-xl cursor-pointer hover:bg-[#f19f42] transition shadow-sm" data-value="${opt.val}">
                         <input type="radio" name="att_custom" value="${opt.val}" class="hidden peer">
                         <div class="w-4 h-4 rounded-full border border-slate-500 flex items-center justify-center mr-2.5 text-[9px] text-white flex-shrink-0">
                             <span class="hidden">✓</span>
@@ -164,7 +164,7 @@ export const initStep11SELF = () => {
         else if (currentT.type === 'select-days') {
             let selectHtml = `
                 <div class="max-w-xs mx-auto">
-                    <select id="att-days-select" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-2.5 text-sm text-slate-200 focus:outline-none focus:border-rose-500 transition">
+                    <select id="att-days-select" class="w-full bg-[#FFFDF7] border border-[#C98D52] rounded-xl p-2.5 text-sm text-[#C98D52] focus:outline-none focus:border-[#dca96f] transition">
             `;
             for (let d = 0; d <= 7; d++) {
                 selectHtml += `<option value="${d}" ${d === 3 ? 'selected' : ''}>${d} дней в неделю</option>`;
